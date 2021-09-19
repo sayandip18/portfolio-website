@@ -53,3 +53,47 @@ function addStar(){
 }
 
 Array(200).fill().forEach(addStar);
+
+// Background Texture
+const spaceTexture = new THREE.TextureLoader().load('space.jpg');
+scene.background = spaceTexture;
+
+// My photo on a 3d cube
+const myself = new THREE.TextureLoader().load('self.png')
+
+const me = new THREE.Mesh(
+    new THREE.BoxGeometry(3,3,3),
+    new THREE.MeshBasicMaterial({map: myself})
+);
+
+scene.add(me);
+
+// Adding moon
+const moonTexture = new THREE.TextureLoader().load('moon.jpg');
+const normalTexture = new THREE.TextureLoader().load('normal.jpg');
+
+const moon = new THREE.Mesh(
+    new THREE.SphereGeometry(3,32,32),
+    new THREE.MeshStandardMaterial({
+        map: moonTexture,
+        normalMap: normalTexture
+    })
+);
+
+scene.add(moon);
+
+// Game loop for torus
+function animate(){
+    requestAnimationFrame(animate);
+
+    torus.rotation.x += 0.01;
+    torus.rotation.y += 0.005;
+    torus.rotation.z += 0.01;
+
+    controls.update();
+
+    renderer.render(scene, camera);
+}
+
+// Finally, calling the animate() function
+animate();
