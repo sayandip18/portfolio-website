@@ -33,9 +33,9 @@ const ambientLight = new THREE.AmbientLight(0xffffff);
 pointLight.position.set(20, 20, 20)
 scene.add(pointLight, ambientLight);
 
-const lightHelper = new THREE.PointLightHelper(pointLight)
-const gridHelper = new THREE.GridHelper(200,50)
-scene.add(lightHelper, gridHelper);
+// const lightHelper = new THREE.PointLightHelper(pointLight)
+// const gridHelper = new THREE.GridHelper(200,50)
+// scene.add(lightHelper, gridHelper);
 
 // Adding orbit controls
 const controls = new OrbitControls(camera, renderer.domElement);
@@ -81,6 +81,32 @@ const moon = new THREE.Mesh(
 );
 
 scene.add(moon);
+
+moon.position.z = 30;
+moon.position.setX(-10);
+
+me.position.z = -5;
+me.position.x = 2;
+
+// Scroll animation
+
+function moveCamera(){
+    const t = document.body.getBoundingClientRect().top;
+
+    moon.rotation.x += 0.05;
+    moon.rotation.y += 0.075;
+    moon.rotation.z += 0.05;
+
+    me.rotation.y += 0.01;
+    me.rotation.z += 0.01;
+
+    camera.position.z = t * -0.01;
+    camera.position.x = t * -0.0002;
+    camera.rotation.y = t * -0.0002;
+};
+
+document.body.onscroll = moveCamera;
+moveCamera();
 
 // Game loop for torus
 function animate(){
