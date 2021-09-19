@@ -2,7 +2,7 @@
 
 Built using
 
--[three.js](https://threejs.org/), a library that uses Javascript and WebGL to display 3D graphics in web browsers.
+- [three.js](https://threejs.org/), a library that uses Javascript and WebGL to display 3D graphics in web browsers.
 - CSS grid
 
 ## To run
