@@ -26,3 +26,16 @@ const material = new THREE.MeshStandardMaterial({ color: 0xFF6347});
 const torus = new THREE.Mesh(geometry, material);
 
 scene.add(torus)
+
+// Light sources
+const pointLight = new THREE.PointLight(0xffffff);
+const ambientLight = new THREE.AmbientLight(0xffffff);
+pointLight.position.set(20, 20, 20)
+scene.add(pointLight, ambientLight);
+
+const lightHelper = new THREE.PointLightHelper(pointLight)
+const gridHelper = new THREE.GridHelper(200,50)
+scene.add(lightHelper, gridHelper);
+
+// Adding orbit controls
+const controls = new OrbitControls(camera, renderer.domElement);
