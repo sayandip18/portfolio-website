@@ -28,8 +28,8 @@ main {
   grid-template-columns: repeat(12, 1fr);
 }
 
-h1, h2, h3, blockquote {
-  font-family: elevon, sans-serif;
+h1, h2, h3, blockquote, footer {
+  font-family: 'Itim', sans-serif;
   font-weight: 700;
   font-style: normal;
 }
@@ -71,9 +71,17 @@ blockquote p {
   background-color: white;
   font-size: 3rem;
   display: inline;
-  line-height: 1;
+  line-height: 1.5;
 }
 
 .left {
   grid-column: 6 / 12;
+}
+
+footer {
+  color: black;
+  background-color: white;
+  font-size: 3rem;
+  display: inline;
+  line-height: 1;
 }
