@@ -55,11 +55,11 @@ function addStar(){
 Array(200).fill().forEach(addStar);
 
 // Background Texture
-const spaceTexture = new THREE.TextureLoader().load('space.jpg');
+const spaceTexture = new THREE.TextureLoader().load('img/space.jpg');
 scene.background = spaceTexture;
 
 // My photo on a 3d cube
-const myself = new THREE.TextureLoader().load('self2.png')
+const myself = new THREE.TextureLoader().load('img/self2.png')
 
 const me = new THREE.Mesh(
     new THREE.BoxGeometry(3,3,3),
@@ -69,8 +69,8 @@ const me = new THREE.Mesh(
 scene.add(me);
 
 // Adding moon
-const moonTexture = new THREE.TextureLoader().load('moon.jpg');
-const normalTexture = new THREE.TextureLoader().load('normal.jpg');
+const moonTexture = new THREE.TextureLoader().load('img/moon.jpg');
+const normalTexture = new THREE.TextureLoader().load('img/normal.jpg');
 
 const moon = new THREE.Mesh(
     new THREE.SphereGeometry(3,32,32),
