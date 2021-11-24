@@ -1,3 +1,5 @@
+@import url("https://use.typekit.net/jmk3xov.css");
+
 canvas {
   position: fixed;
   top: 0;
@@ -29,7 +31,7 @@ main {
 }
 
 h1, h2, h3, blockquote, footer {
-  font-family: 'Itim', sans-serif;
+  font-family: elevon, sans-serif;
   font-weight: 700;
   font-style: normal;
 }
@@ -76,12 +78,4 @@ blockquote p {
 
 .left {
   grid-column: 6 / 12;
-}
-
-footer {
-  color: black;
-  background-color: white;
-  font-size: 3rem;
-  display: inline;
-  line-height: 1;
 }
