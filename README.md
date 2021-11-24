@@ -9,6 +9,7 @@ Built using
 
 ```
 git clone https://github.com/sayandip18/portfolio-website.git
+cd portfolio-website
 npm install
 npm run dev
 ```
