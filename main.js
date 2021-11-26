@@ -59,7 +59,7 @@ const spaceTexture = new THREE.TextureLoader().load('img/space.jpg');
 scene.background = spaceTexture;
 
 // My photo on a 3d cube
-const myself = new THREE.TextureLoader().load('img/self2.png')
+const myself = new THREE.TextureLoader().load('img/cube.jpg')
 
 const me = new THREE.Mesh(
     new THREE.BoxGeometry(3,3,3),
